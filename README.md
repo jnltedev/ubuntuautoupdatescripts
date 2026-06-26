@@ -1,38 +1,43 @@
 # Ubuntu Auto Update Scripts
 
-Eine kleine Sammlung von Bash-Skripten, um ein Ubuntu-System automatisch zu aktualisieren.
+A small collection of Bash scripts to automatically update an Ubuntu system.
 
-## Verwendung
+## Installation
 
-1. Repository klonen:
-   ```bash
-   git clone https://github.com/<dein-username>/ubuntuautoupdatescripts.git
-   cd ubuntuautoupdatescripts
-   ```
+Clone the repository:
 
-2. Ausführungsrechte vergeben:
-   ```bash
-   chmod +x *.sh
-   ```
+```bash
+git clone https://github.com/jnltedev/ubuntuautoupdatescripts.git
+cd ubuntuautoupdatescripts
+```
 
-3. Das Hauptskript starten:
-   ```bash
-   ./update.sh
-   ```
+Make the scripts executable:
 
-Das Skript führt automatisch alle `.sh`-Dateien im Verzeichnis aus (außer `update.sh`) und zeigt für jedes Skript an, ob die Ausführung erfolgreich war.
+```bash
+chmod +x *.sh
+```
 
-## Ausgabe
+## Usage
 
-- ✅ Successfully – Skript erfolgreich ausgeführt.
-- ❌ Error – Fehler beim Ausführen des Skripts.
+Run the main script:
 
-Nach Abschluss aller Skripte erscheint:
+```bash
+./update.sh
+```
+
+The main script automatically executes all `.sh` files in the repository (except `update.sh`) and displays whether each script completed successfully.
+
+## Output
+
+- ✅ Successfully – Script completed successfully.
+- ❌ Error – An error occurred while running the script.
+
+After all scripts have finished, you will see:
 
 ```text
 🎉 All updates has been installed.
 ```
 
-## Lizenz
+## Repository
 
-MIT License
+`ubuntuautoupdatescripts`

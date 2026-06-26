@@ -2,18 +2,18 @@
 
 set -e
 
-echo "Entferne alte VSCode-Version..."
+echo "Remove old VSCode version..."
 sudo apt remove code -y || true
 
-echo "Lade aktuelle VSCode .deb herunter..."
+echo "Downloading latest VSCode .deb..."
 TMP_DEB="/tmp/vscode.deb"
 
 wget -O "$TMP_DEB" "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 
-echo "Installiere VSCode..."
+echo "Installing VSCode..."
 sudo apt install "$TMP_DEB" -y
 
-echo "Bereinige temporäre Dateien..."
+echo "Cleaning up temporary files..."
 rm -f "$TMP_DEB"
 
-echo "VSCode wurde erfolgreich aktualisiert."
+echo "VSCode has been successfully updated."

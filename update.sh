@@ -2,10 +2,8 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Einmal sudo anfordern
 sudo -v
 
-# Sudo-Session aktiv halten
 while true; do
     sudo -n true
     sleep 60
@@ -18,11 +16,11 @@ for script in "$SCRIPT_DIR"/*.sh; do
     printf "%-30s" "$(basename "$script")"
 
     if bash "$script" >/dev/null 2>&1; then
-        echo "✅ Erfolgreich"
+        echo "✅ Successfully"
     else
-        echo "❌ Fehler"
+        echo "❌ Error"
     fi
 done
 
 echo
-echo "🎉 Alle Updates abgeschlossen."
+echo "🎉 All updates has been installed."
